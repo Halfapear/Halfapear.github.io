@@ -1,0 +1,56 @@
+/* 基本样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* 段落样式 */
+p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* 链接样式 */
+a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 列表样式 */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+    padding-left: 16px;
+    position: relative;
+}
+
+li:before {
+    content: '•';
+    color: #0275d8;
+    position: absolute;
+    left: 0;
+}
+
+/* 响应式布局 */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+}
