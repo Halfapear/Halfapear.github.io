@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Your Chosen Font', sans-serif; /* 替换为你喜欢的字体名称 */
+  background-image: url('image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  color: rgb(197, 209, 24); /* 文字颜色，根据你的背景图调整 */
+  font-size: 24px; /* 根据需要调整标题的字体大小 */
+}
+
+/* 以下是正文部分，可以根据需要调整样式 */
+p {
+  text-align: center; /* 文本居中对齐，可以根据需要调整 */
+  font-size: 16px; /* 文本字体大小，根据需要调整 */
+  color: #4219d4; /* 文本颜色，根据需要调整 */
+}
+
+/* 列表项居中且颜色为紫色 */
+li {
+  text-align: center;
+  color: purple;
+}
