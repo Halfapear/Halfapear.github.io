@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的娱乐板块</title>
+    <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.min.css">
+    <style>
+        .large-avatar {
+            width: 50vw;
+            height: auto;
+            image-rendering: pixelated;
+        }
+        .container {
+            text-align: center; /* 居中显示 */
+        }
+        .video-background {
+        position: absolute;
+        top: 0; /* 使用top和left代替right和bottom，确保视频从左上角开始铺设 */
+        left: 0;
+        width: 100%;
+        height: 100%; /* ！！！成功了 视频只有左上角的问题就是这两行导致的*/
+        z-index: -100;
+        background-size: cover;
+        object-fit: cover; /* 添加这一行，确保视频保持宽高比并填满容器 */
+        }
+    </style>
+</head>
+<body>
+
+    <video class="video-background" autoplay loop muted>
+        <source src="image/miyako_swimsuit.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+<section class="nes-container with-title is-centered">
+    <h2 class="title">欢迎来到我的娱乐板块</h2>
+    <p>探索经典游戏，回味无穷的乐趣！</p>
+    <div class="container">
+        <img src="image\game1.jpg" class="nes-avatar large-avatar">
+        <p>最爱的经典游戏合集</p>
+    </div>
+    <div>
+        <!-- NES风格的按钮 -->
+        <button type="button" class="nes-btn is-primary">开始游戏</button>
+        <button type="button" class="nes-btn is-success">更多信息</button>
+    </div>
+    <div>
+        <!-- NES风格的图标 -->
+        <i class="nes-icon is-small heart"></i>
+        <i class="nes-icon is-small star"></i>
+        <i class="nes-icon is-small like"></i>
+    </div>
+</section>
+
+</body>
+</html>
