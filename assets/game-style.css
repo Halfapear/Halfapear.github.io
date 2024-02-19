@@ -1,0 +1,61 @@
+/* 大图片 */
+.large-avatar {
+    width: 40vw;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.container {
+    text-align: center; /* 居中显示 */
+}
+.left-align {
+    text-align: left; /* 左对齐文本 */
+    margin-left: 0; /* 确保没有左边距 */
+    padding-left: 10px; /* 可以根据需要调整，为内容添加一些内边距 */
+}
+
+
+/* 
+//隐藏的视频背景
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    background-size: cover;
+    object-fit: cover; 
+} */
+
+/*注意这里两个文件夹是平行的，使用了../image/game2.jpg*/
+.image-background {
+    position: fixed; /* or 'absolute', depending on your layout */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../image/game2.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
+  }
+  
+/* 字体 */
+@font-face {
+    font-family: 'Zpix';
+    src: url('zpix.ttf') format('truetype');
+  }
+  
+  body {
+    font-family: 'Zpix', sans-serif;
+  }
+  
+  p {
+    color: white;
+  }
+
+  /*
+  图片展示的时候能不能美化一点
+  试试按钮搭配那个图片翻页的库
+  */
+  

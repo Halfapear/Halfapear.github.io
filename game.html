@@ -1,55 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>我的娱乐板块</title>
+    <title>游戏板块</title>
+    <!-- 引入NES.css -->
     <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.min.css">
-    <style>
-        .large-avatar {
-            width: 50vw;
-            height: auto;
-            image-rendering: pixelated;
-        }
-        .container {
-            text-align: center; /* 居中显示 */
-        }
-        .video-background {
-        position: absolute;
-        top: 0; /* 使用top和left代替right和bottom，确保视频从左上角开始铺设 */
-        left: 0;
-        width: 100%;
-        height: 100%; /* ！！！成功了 视频只有左上角的问题就是这两行导致的*/
-        z-index: -100;
-        background-size: cover;
-        object-fit: cover; /* 添加这一行，确保视频保持宽高比并填满容器 */
-        }
-    </style>
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="assets\game-style.css">
+
+    <!-- 图片的代码 引入字体图标 -->
+    <!-- <link rel="stylesheet" href="/fonts/css/font-awesome.css"> -->
+    <link rel="stylesheet" href="assets/game-photo.css">
 </head>
 <body>
 
+    <!-- 背景-->
+    
+    <!-- //隐藏的视频背景
     <video class="video-background" autoplay loop muted>
         <source src="image/miyako_swimsuit.mp4" type="video/mp4">
         Your browser does not support the video tag.
-    </video>
-    
-<section class="nes-container with-title is-centered">
-    <h2 class="title">欢迎来到我的娱乐板块</h2>
-    <p>探索经典游戏，回味无穷的乐趣！</p>
-    <div class="container">
-        <img src="image\game1.jpg" class="nes-avatar large-avatar">
-        <p>最爱的经典游戏合集</p>
-    </div>
-    <div>
-        <!-- NES风格的按钮 -->
-        <button type="button" class="nes-btn is-primary">开始游戏</button>
-        <button type="button" class="nes-btn is-success">更多信息</button>
-    </div>
-    <div>
-        <!-- NES风格的图标 -->
-        <i class="nes-icon is-small heart"></i>
-        <i class="nes-icon is-small star"></i>
-        <i class="nes-icon is-small like"></i>
-    </div>
-</section>
+    </video>  -->
+    <div class="image-background"></div>
 
+    <!-- 标题 -->
+    <section class="nes-container with-title is-centered">
+        <p>欢迎来到我的娱乐板块</p>
+    </section>
+
+
+    <section class="nes-container with-title left-align">
+    <div>
+        <button type="button" class="nes-btn is-success">人间地狱</button>
+        
+    </div>
+    <div>
+        
+    </div>    
+    <div>
+        
+    </div>        
+    <div>
+
+    </div>
+
+    <div>
+    <p class="title">步兵</p>
+    <p>步兵是战场的基石，负责前线作战、占领关键地区，并执行多种任务。装备轻便，可快速移动。</p>
+    <button type="button" class="nes-btn is-primary">了解更多</button>
+    </div>      
+    <div class="left-align">
+        <img src="image/game1.jpg" class="nes-avatar large-avatar">
+    </div>
+
+    <!-- 显示风琴图片的代码 -->
+    <div class="container">
+
+    <!-- 事实证明，直接从windows复制来的地址必须把\ 换成/ -->
+    <div class="item active" style="background-image: url(image/连续剧1.jpg);">
+        <div class="shadow"></div>
+        <div class="content">
+            <div class="icon">
+                <i class="fa fa-sun-o"></i>
+            </div>
+            <div class="text">
+                <div class="tit">连续剧1</div>
+                <div class="sub">可怜地puma</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="item active" style="background-image: url(image/连续剧2.jpg);">
+        <div class="shadow"></div>
+        <div class="content">
+            <div class="icon">
+                <i class="fa fa-sun-o"></i>
+            </div>
+            <div class="text">
+                <div class="tit">连续剧2</div>
+                <div class="sub">刚准备干掉它前面的斯图亚特</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="item active" style="background-image: url(image/连续剧3.jpg);">
+        <div class="shadow"></div>
+        <div class="content">
+            <div class="icon">
+                <i class="fa fa-sun-o"></i>
+            </div>
+            <div class="text">
+                <div class="tit">连续剧3</div>
+                <div class="sub">Boom~（点开图片查看大图）</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 以及它的js -->
+    </div>
+    <script src="assets/game-photo.js"></script>
+    
+    </section>
+
+
+    <!-- 底部居中图标 -->
+    <section class="nes-container with-title is-centered">
+        <div>
+            <!-- NES风格的图标 -->
+                <i class="nes-icon is-small heart"></i>
+                <i class="nes-icon is-small star"></i>
+                <i class="nes-icon is-small like"></i>
+            </div>
+    </section>
+
+    
 </body>
 </html>
+
+
+  
