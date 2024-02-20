@@ -11,6 +11,7 @@ body{
     height: 100vh;
     /* 弹性布局 水平+垂直居中 */
 /* 2.19 23：50 我在gpt的帮助下稀里糊涂地注释了一个东西结果就好了（明显是冲突），明早来研究下原理 */
+/* 首先我不需要居中，其次估计是flex的锅 */
     /* display: flex;
     justify-content: center;
     align-items: center; */
