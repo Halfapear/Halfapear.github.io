@@ -1,0 +1,74 @@
+body,
+/* 这部分设置<body>和<html>元素的外边距和内边距都为0，移除默认的间距，使得页面内容能够充满整个视口。同时设置它们的高度为100%，这通常用于确保页面至少与视口一样高。
+ */
+html{
+      margin: 0;
+      padding: 0;
+      height: 100%;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* 这里设置了<svg>元素的样式。display: block;让SVG元素像块级元素一样显示，占据一整行。
+width: 100%;和height: 100vh;将SVG的宽度设置为视口宽度的100%，高度设置为视口高度的100%。position: fixed;将SVG固定在页面的顶部，不随滚动条滚动。 */
+svg {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+}
+
+/* .scrollElement类用于设置滚动元素的样式。position: absolute;表示位置绝对定位，height: 6000px;设置了元素的高度，这通常用于制造滚动效果。width: 100px;是宽度。
+top: 0;将元素定位在顶部。z-index: 0;设置了堆叠顺序，数字较小的元素将被放置在较大数字的元素下面。 */
+.scrollElement {
+      position: absolute;
+      height: 6000px;
+      width: 100px;
+      top: 0;
+      z-index: 0;
+}
+
+/* .btn类为页面中的按钮设置了样式。包括固定定位，边框，圆角，字体样式，颜色，光滑的字体渲染效果以及鼠标悬停变换等。
+.btn 是一个类选择器。它用于选择HTML文档中所有带有 class="btn" 属性的元素，并对这些元素应用一组样式规则。类选择器以点（.）开头，后跟类的名称。在这个上下文中，“btn”很可能是“button”的缩写，用于指代页面上作为按钮用途的元素。
+ */
+  .btn {
+      position: fixed;
+      bottom: 5%;
+      right: 0px;
+      transform: translateX(-50%);
+      border: 1px solid #fff;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      padding: 0.5rem 0.7em;
+      background-color: transparent;
+      color: #ffffff;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      cursor: pointer;
+      transition: all .3s;
+      z-index: 11;
+  }
+
+/* .btn_works类是.btn的一个特殊情况，它设置了按钮相对于左边的位置，并移除了可能从其他类继承的right属性和文本装饰。 */
+  .btn_works {
+      left: 100px;
+      right: unset;
+      text-decoration: none;
+  }
+
+/* .btn:hover伪类用于设置按钮在鼠标悬停时的样式。这里改变了按钮的背景颜色和文本颜色，提供了视觉反馈，增强用户交互体验。 */
+  .btn:hover {
+      background: #ffffff;
+      color: #1B1734;
+  }
