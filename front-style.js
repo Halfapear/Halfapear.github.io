@@ -1,3 +1,9 @@
+
+//这个speed挺讲究的，但我说不清到底是什么
+//按理说这个speed就是速度，scrub是平滑度，但每个scene都要单独调，很烦
+//另外，
+
+//这行代码注册了 ScrollTrigger 插件，使其可以与 GSAP 一起使用来创建滚动触发的动画。 
 gsap.registerPlugin(ScrollTrigger);
 let speed = 100;
 

@@ -1,3 +1,5 @@
+<!-- 这次html文本恐怖得长，gpt已经完全消化不了了 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,24 +9,34 @@
     <!-- 引入CSS文件 -->
     <link rel="stylesheet" href="front-style.css">
 </head>
-<body>
-    <!-- HTML内容 -->
 
-    <!-- 引入JavaScript文件 -->
-    <!-- 经过测试，加了下面两行才有蝙蝠煽动翅膀的效果，其它效果都没出来 -->
-    <!-- 删去基本js，css也是，都会失去一部分效果，看来倒是起作用了 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
-    <script src="front-style.js"></script>
-
-</body>
+<!-- 经过多少次试错，这里将js方面的代码挪到最下面，是DOM就绪时机的问题 -->
 
 </html>
 
 
+<!-- SVG元素解释
+<svg>元素：定义了SVG图形的容器，包括它的命名空间xmlns和xmlns:xlink属性，以及视图框viewBox和保持宽高比preserveAspectRatio的设置。viewBox定义了在SVG内部使用的坐标系统，而preserveAspectRatio保证SVG内容在不同尺寸比例下正确缩放。
+定义（Defs）区域
+<defs>元素：用于定义可在SVG内部多次引用的元素，比如渐变、路径等。在这个例子中，定义了多种线性渐变（<linearGradient>）和径向渐变（<radialGradient>），每个渐变有不同的颜色停点（<stop>元素）。
+渐变（Gradient）元素
+线性渐变（<linearGradient>）：通过x1、y1、x2、y2属性定义渐变的起始和结束位置，创建一个线性颜色过渡。gradientUnits属性指定渐变单位，userSpaceOnUse表示渐变在用户坐标系统中定义。
+
+径向渐变（<radialGradient>）：通过cx、cy、r属性定义渐变的中心点和半径，创建从中心向外的颜色过渡。
+
+图形元素
+<rect>元素：定义了一个矩形，使用width和height属性指定大小，fill属性应用了一个径向渐变。
+
+<g>元素：<g>元素用于将多个SVG形状分组在一起，可以对整个组应用变换或样式。这里用于定义一组云朵，其中每个<path>元素代表一朵云，id属性用于唯一标识每朵云，transform属性用于移动云朵的位置。
+
+Path元素
+<path>元素：通过d属性定义一条路径。路径可以是直线、曲线、圆弧等任意组合。这里的路径用来绘制云朵的形状，fill属性指定填充颜色。
+    这是scene的一些注释 -->
+
+<!-- 下一行的url指定了SVG文档使用的XML命名空间 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 750 500" preserveAspectRatio="xMidYMax slice">
   <defs>
-      <!-- Scene 1 Gradient -->
+      <!-- Scene 1 Gradient 渐变背景和云层 -->
       <linearGradient id="grad1" x1="-154.32" y1="263.27" x2="-154.32" y2="374.3"
           gradientTransform="matrix(-1, 0, 0, 1.36, 231.36, -100.14)" gradientUnits="userSpaceOnUse">
           <stop offset="0.07" stop-color="#9c536b" />
@@ -307,7 +319,9 @@
   
   <!-- SCENE 1 -->
   <g id="scene1">
+    <!-- <text x="200" y="200" font-family="Verdana" font-size="24" fill="black">这里是Scene1中的文字</text> -->
       <g id="hills1">
+        <!-- <text x="200" y="200" font-family="Verdana" font-size="24" fill="black">这里是Scene1中的文字</text> -->
           <path id="h1-9"
               d="M696.36,409H75V335.47c10.19-.52,20.5-.36,30.05-3.65,8.11-2.8,15.84-8.49,23.78-11.33s18.18,1.84,25.36-4.85C165,305.56,172,289.79,186.71,292.8c6.21,1.27,12.09,3.66,18.43.84,6-2.65,9.73-9.46,14.69-13.54,2.87-2.35,6.42-3.2,9.35-5.49,1.65-1.28,5.45-6.37,7-6.92,7.94-2.93,10.34,2.69,18.56-3.47,6.45-4.84,8.52-8.21,15.45-5,5,2.35,11.89,10.09,16,15.37C294.9,286,302,297.77,312.71,307.53c11.62,10.63,21.59,9.37,34.67,5.83,16.12-4.37,18.32,9.06,32.24,15.28,7.45,3.32,13.23-1.7,19.6-2.08,3.64-.22,5.85,2.12,9.37,1.82,3.12-.27,4.08-4.44,8.33-3,7.32,12.31,15.75,20,28.21,20.59,14.32.7,27.12.76,39.73-4.94A145.24,145.24,0,0,0,502.11,332c8.71-5.36,11.22-2.82,19.35,1.5,11.66,6.21,25.31,1.08,36.56,9.18,5.53,4,8.36,12.23,14.64,14.79,4.86,2,15.59.38,20.4-1.18,13.47-4.38,21.52-16.59,36.56-17.33,13.57-.67,25.19-4.17,39.11-2.31,10.91,1.46,18.72-.1,27.63-2.61Z"
               fill="url(#grad1)" />
@@ -348,5 +362,25 @@
 
 <div class="scrollElement"></div>
 
-<a href="https://codepen.io/collection/DxkYzq" target="_blank" class="btn btn_works">My Works</a>
+<a href="404" target="_blank" class="btn btn_works">My Works</a>
 <button class="btn" id="fullscr">Go Fullscreen</button>
+
+
+
+<html>
+    <body>
+        <!-- HTML内容 -->
+    
+        <!-- 引入JavaScript文件 -->
+        <!-- 经过测试，加了下面两行才有蝙蝠煽动翅膀的效果，其它效果都没出来 -->
+        <!-- 删去基本js，css也是，都会失去一部分效果，看来倒是起作用了 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
+        <script src="front-style.js"></script>
+        <!-- 文字直接写这就行 2.22 -->
+        <p></p>
+        <p></p>
+        <p></p>
+        <p>     <text x="200" y="200" font-family="Verdana" font-size="24" fill="black">这里是Scene1中的文字</text></p>
+    </body>
+</html>
