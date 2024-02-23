@@ -59,10 +59,15 @@
     object-fit: cover; /* 添加这一行，确保视频保持宽高比并填满容器 */
 }
     </style>
+
+    <!-- 最新版本的jQuery 听gpt说的 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
+
 <body>
 
-<div class="ws-slides">
+<!-- 这里好像有个多出来的 -->
+<!-- <div class="ws-slides"> -->
     <!-- Halfapear的个人博客 -->
 
     <!-- <section style="background: url('path/to/your/background.jpg') no-repeat center center; background-size: cover;">
@@ -82,7 +87,7 @@
         <h1>Halfapear的个人博客</h1>
     </section> -->
 
-    <div class="ws-slides">
+    <article id="webslides">
         <section class="aligncenter">
             <h1>Halfapear的个人博客</h1>
             <video class="video-background" autoplay loop muted>
@@ -157,42 +162,93 @@
         <ul>
             <li> <a href="game.html">界面</a> </li>
           </ul>
+
+</article>
+
+    <!-- Disqus 评论幻灯片 -->
+    <section>
+        <div id="disqus_thread"></div>
     </section>
-</div>
-
-<!-- 引入WebSlides的JS -->
-<script src="assets/webslides.js"></script>
-<script>
-    // 初始化WebSlides
-    new WebSlides();
-</script>
-
+    
 <!-- 网站人数记录功能 -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
             <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
             <!-- <p>网站总访问人数：<span id="busuanzi_value_site_uv">0</span>人</p> -->
             
+
+    <!-- 引入WebSlides的JS -->
+<script src="assets/webslides.js"></script>
+<!-- <script>
+    // 初始化WebSlides
+    new WebSlides();
+</script> -->
+<!-- 这个好像是我之前漏掉的（不对啊，前面有的） 它激活了WebSlides的所有功能和行为 -->
+<script>
+    new WebSlides();
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const ws = new WebSlides();
+    
+        ws.el.addEventListener('ws:slide-change', function(event) {
+            const currentSlideIndex = ws.currentSlideI_;
+            const disqusSlideIndex = 7; // 假设 Disqus 在第八个幻灯片，索引为 1
+    
+            if (currentSlideIndex === disqusSlideIndex) {
+                // 检查 Disqus 是否已加载
+                if (typeof DISQUS === 'undefined') {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    d.body.appendChild(s);
+    
+                    // 配置 Disqus
+                    window.disqus_config = function () {
+                        this.page.url = 'YOUR_PAGE_URL'; // 替换成你的页面 URL
+                        this.page.identifier = 'unique-identifier-' + currentSlideIndex; // 确保这是唯一的
+                    };
+                } else {
+                    // 如果 Disqus 已经加载，重置 Disqus 以显示当前页面的评论
+                    DISQUS.reset({
+                        reload: true,
+                        config: function () {
+                            this.page.url = 'https://halfapear.github.io/'; // 替换成你的页面 URL
+                            this.page.identifier = 'unique-identifier-' + currentSlideIndex;
+                        }
+                    });
+                }
+            }
+        });
+    });
+    </script>
+    
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+
 </body>
 </html>
 
+
+<!-- 2.23 首先 我给这一部分加section不仅没有显示，而且所有页面的中间都会出现一条缝 -->
 <!-- 添加disqus评论功能 -->
 <div id="disqus_thread"></div>
 <script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    // /**
+    // *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    // *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
     
-    var disqus_config = function () {
-    this.page.url = 'https://halfapear.github.io/';  // 替换成你网页的 URL
-    this.page.identifier = '{{ page.id }}'; // 替换成页面的唯一标识符
-    };
+    // var disqus_config = function () {
+    // this.page.url = 'https://halfapear.github.io/';  // 替换成你网页的 URL
+    // this.page.identifier = '{{ page.id }}'; // 替换成页面的唯一标识符
+    // };
     
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://https-halfapear-github-io.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
+    // (function() { // DON'T EDIT BELOW THIS LINE
+    // var d = document, s = d.createElement('script');
+    // s.src = 'https://https-halfapear-github-io.disqus.com/embed.js';
+    // s.setAttribute('data-timestamp', +new Date());
+    // (d.head || d.body).appendChild(s);
+    // })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
