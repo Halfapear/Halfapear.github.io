@@ -1,0 +1,37 @@
+/* 加个字体（我才发现index没有专门的css，好，现在我创立一个） */
+@font-face {
+  font-family: 'AlimamaDaoLiTi';
+  src: url('AlimamaDaoLiTi.ttf') format('truetype');
+}
+
+body, h1, h2, h3, h4, h5, h6, p, li, a, span, input, button, select, textarea {
+  font-family: 'AlimamaDaoLiTi', sans-serif !important;
+}
+
+/* 给所有的li一个毛玻璃效果 */
+li {
+  font-style: italic; /* 斜体文本 */
+  color: #000; /* 文本颜色 */
+  background: hsla(0, 0%, 100%, .5); /* 半透明背景 */
+  padding: 10px; /* 内边距 */
+  margin-bottom: 10px; /* 底部外边距 */
+  box-shadow: 0 1px 1px hsla(0, 0%, 100%, .3), /* 内部阴影 */
+              0 0 0 1px hsla(0, 0%, 100%, .3) inset, /* 边框效果 */
+              0 3px 1em rgba(0, 0, 0, 0.12); /* 外部阴影 */
+  position: relative; /* 为可能的伪元素定位 */
+  overflow: hidden; /* 防止内容溢出 */
+  border-radius: 0.3em; /* 边框圆角 */
+  text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3); /* 文字阴影 */
+}
+
+li::before {
+  content: ""; /* 必要的伪元素内容 */
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: url("./static/city-night.jpg") fixed 0 / cover; /* 背景图片 */
+  filter: blur(10px); /* 背景模糊效果 */
+  margin: -10px; /* 扩大伪元素区域以覆盖边缘 */
+  z-index: -1; /* 确保背景位于文本之下 */
+}
+
+
