@@ -169,31 +169,27 @@
     <section class="comment" style="background-image: url('image/game_development_image.jpg');">
         <h1>warning:现在的评论区加载较慢且需要翻墙</h1>
         <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-        <!-- 2.23 首先 我给这一部分加section不仅没有显示，而且所有页面的中间都会出现一条缝 -->
         <!-- 添加disqus评论功能 -->
         <div id="disqus_thread"></div>
         <script>
             setTimeout(function() {
-                // Disqus 加载代码
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                */
+                var disqus_config = function () {
+                    this.page.url = 'https://halfapear.github.io/';  // 替换成你网页的 URL
+                    this.page.identifier = '{{ page.id }}'; // 替换成页面的唯一标识符
+                };
+                
+                // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://https-halfapear-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
             }, 1000); // 延迟时间可根据实际情况调整
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-            var disqus_config = function () {
-            this.page.url = 'https://halfapear.github.io/';  // 替换成你网页的 URL    
-            //ps：!这里在disqus_config函数中，你设置了this.page.identifier = '{{ page.id }}';。这里{{ page.id }}应该是一个动态值，代表当前页面的唯一标识符。如果你是在一个静态网站或没有后端模板引擎处理这个值的情况下使用它，这个表达式不会被正确解析，从而导致Disqus无法为每个页面加载正确的评论区。
-            //更正：其实不是这里的问题
-            this.page.identifier = '{{ page.id }}'; // 替换成页面的唯一标识符 
-            };
-            
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://https-halfapear-github-io.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
         </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </section>
 
 </article>
