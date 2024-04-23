@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>98.css 示例</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+
+</head>
+<body>
+
+<!-- 测试用style -->
+<style>
+
+    
+</style>
+
+<!-- 按钮 -->
+<button>点击我</button>
+<button id="skipButton">Skip</button>
+<button id="alertButton">Hello</button>
+<!-- 按钮尝试 -->
+<!-- 
+<a href="https://www.example.com" class="link-button" role="button">Go to Website</a>
+<a href="https://www.example.com" class="button">访问网站</a> 
+-->
+
+<!-- 复选框 -->
+<input type="checkbox" id="checkbox1">
+<label for="checkbox1">这是一个复选框</label>
+
+<!-- 单选按钮 -->
+<input type="radio" id="option1" name="option" checked>
+<label for="option1">选项 1</label>
+<input type="radio" id="option2" name="option">
+<label for="option2">选项 2</label>
+
+<!-- 组合框 -->
+<fieldset>
+    <legend>组合框示例</legend>
+    <input type="radio" id="group1" name="group" checked>
+    <label for="group1">组内选项 1</label>
+</fieldset>
+
+<!-- 文本框 -->
+<label for="textbox">文本框：</label>
+<input type="text" id="textbox">
+
+<!-- 滑动条 -->
+<label for="slider">滑动条：</label>
+<input type="range" id="slider">
+
+<!-- 下拉菜单 -->
+<select>
+    <option>选项 1</option>
+    <option>选项 2</option>
+    <option>选项 3</option>
+</select>
+
+<!-- 窗口 -->
+<div class="window" style="width: 300px;">
+    <div class="title-bar">
+        <div class="title-bar-text">窗口标题</div>
+    </div>
+    <div class="window-body">
+        窗口内容区域。
+    </div>
+</div>
+
+<!-- 树视图 -->
+<ul class="tree-view">
+    <li>项目 1</li>
+    <li>项目 2
+        <ul>
+            <li>子项目 1</li>
+        </ul>
+    </li>
+</ul>
+
+<!-- 标签页 -->
+<div role="tablist" class="tabs">
+    <button role="tab" aria-selected="true">标签 1</button>
+    <button role="tab">标签 2</button>
+</div>
+
+<!-- 表格视图 -->
+<div class="window" style="width: 400px;">
+    <table>
+        <thead>
+            <tr>
+                <th>名称</th>
+                <th>值</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>项目 1</td>
+                <td>值 1</td>
+            </tr>
+            <tr>
+                <td>项目 2</td>
+                <td>值 2</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<script src="assets/cscontent.js"></script>
+
+</body>
+</html>
