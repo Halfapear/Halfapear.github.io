@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>作品集 · 蒋昭柏</title>
+<style>
+  :root{
+    --bg:#0b1020; --card:#151c33; --card2:#1b2440;
+    --text:#e8ecf6; --muted:#9aa6c4; --accent:#5b8cff; --accent2:#31d0aa;
+    --line:rgba(255,255,255,.09);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:radial-gradient(1200px 600px at 15% -10%, #1b2a5e 0%, transparent 60%),
+                           radial-gradient(900px 500px at 90% 0%, #123b3a 0%, transparent 55%),
+                           var(--bg);
+    color:var(--text);
+    font:16px/1.72 -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px; margin:0 auto; padding:64px 24px 88px}
+  header .eyebrow{color:var(--accent2); letter-spacing:.18em; text-transform:uppercase; font-size:12px; font-weight:700}
+  header h1{margin:.28em 0 .2em; font-size:clamp(30px,5vw,46px); line-height:1.15; letter-spacing:-.02em}
+  header p.lead{color:var(--muted); max-width:62ch; margin:.2em 0 0}
+  .meta{margin-top:18px; display:flex; flex-wrap:wrap; gap:10px}
+  .chip{font-size:13px; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:4px 12px; background:rgba(255,255,255,.03)}
+  .grid{display:grid; gap:26px; margin-top:44px}
+  .card{
+    background:linear-gradient(180deg, var(--card) 0%, var(--card2) 100%);
+    border:1px solid var(--line); border-radius:18px; overflow:hidden;
+    box-shadow:0 20px 50px -30px rgba(0,0,0,.9);
+  }
+  .card-body{padding:26px 26px 22px}
+  .card h2{margin:0 0 6px; font-size:22px; letter-spacing:-.01em}
+  .card h2 .en{color:var(--muted); font-weight:500; font-size:14px; margin-left:8px}
+  .tags{display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 14px}
+  .tag{font-size:12.5px; color:#cfe0ff; background:rgba(91,140,255,.14); border:1px solid rgba(91,140,255,.28); border-radius:8px; padding:3px 10px}
+  .card ul{margin:10px 0 0; padding-left:20px; color:var(--muted)}
+  .card ul li{margin:4px 0}
+  .card ul li b{color:var(--text); font-weight:600}
+  .shots{display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--line)}
+  @media (max-width:720px){ .shots{grid-template-columns:1fr} .wrap{padding:44px 18px 64px} }
+  .shots a{display:block; background:#0a0f1e}
+  .shots img{display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:16/9}
+  .shots.single{grid-template-columns:1fr}
+  .noshot{padding:34px 26px; background:linear-gradient(120deg, rgba(49,208,170,.10), rgba(91,140,255,.10)); border-top:1px solid var(--line)}
+  .noshot p{margin:0; color:var(--muted); font-size:14.5px}
+  .foot{padding:18px 26px 24px; border-top:1px solid var(--line); display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; text-decoration:none;
+    color:#0b1020; background:linear-gradient(135deg,var(--accent2),#7fe3c9);
+    padding:9px 16px; border-radius:10px; font-weight:700; font-size:14px;
+  }
+  .btn.ghost{background:transparent; color:var(--text); border:1px solid var(--line); font-weight:600}
+  footer.page{margin-top:56px; color:var(--muted); font-size:14px; display:flex; flex-wrap:wrap; gap:14px; align-items:center}
+  a{color:inherit}
+  .note{font-size:13px; color:var(--muted); margin-top:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Portfolio</div>
+    <h1>蒋昭柏 · 作品集</h1>
+    <p class="lead">北京邮电大学 国际学院 · 电子信息工程 · 2027 届。方向：具身智能与 VLA 推理加速、端侧部署与评测，兼做 Web 前端与交互式内容。</p>
+    <div class="meta">
+      <span class="chip">VLA / 具身智能</span>
+      <span class="chip">前端与交互</span>
+      <span class="chip">嵌入式 &amp; 机器人</span>
+      <span class="chip">Java Web</span>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <!-- 1. TA 招聘系统 -->
+    <article class="card">
+      <div class="shots">
+        <a href="image/portfolio/se-ta.jpg" target="_blank" rel="noopener"><img src="image/portfolio/se-ta.jpg" alt="TA 招聘系统 - TA 工作台"></a>
+        <a href="image/portfolio/se-mo.jpg" target="_blank" rel="noopener"><img src="image/portfolio/se-mo.jpg" alt="TA 招聘系统 - MO 工作台"></a>
+      </div>
+      <div class="card-body">
+        <h2>TA 招聘系统<span class="en">Software Engineering · Group 92</span></h2>
+        <div class="tags">
+          <span class="tag">Java Servlet</span><span class="tag">HTML / CSS / JS</span>
+          <span class="tag">文件型存储</span><span class="tag">4 个 Sprint</span>
+        </div>
+        <ul>
+          <li><b>做什么</b>：MO / TA / Admin 三角色的助教招聘平台，覆盖职位发布、申请投递、简历匹配、工作量统计。</li>
+          <li><b>我负责</b>：服务端模块（职位 / 申请 / 匹配 / 统计）、邮箱验证码流程、Sprint 测试记录与 Javadoc 产出。</li>
+          <li><b>结果</b>：完整跑通 4 个 Sprint 迭代，交付用户手册、原型 PDF 与可运行本地部署脚本。</li>
+        </ul>
+      </div>
+      <div class="foot">
+        <span class="note">小组项目 · 4 人团队</span>
+        <a class="btn" href="https://github.com/Halfapear/SoftwareEngineeringGroup92" target="_blank" rel="noopener">查看仓库 →</a>
+      </div>
+    </article>
+
+    <!-- 2. Compression Heist -->
+    <article class="card">
+      <div class="shots">
+        <a href="image/portfolio/imd-home.jpg" target="_blank" rel="noopener"><img src="image/portfolio/imd-home.jpg" alt="Compression Heist 首页"></a>
+        <a href="image/portfolio/imd-game.jpg" target="_blank" rel="noopener"><img src="image/portfolio/imd-game.jpg" alt="Compression Heist 游戏模块"></a>
+      </div>
+      <div class="card-body">
+        <h2>Compression Heist<span class="en">EBU6305 交互式媒体设计与制作 · Group 17</span></h2>
+        <div class="tags">
+          <span class="tag">HTML / CSS / JS</span><span class="tag">交互设计</span>
+          <span class="tag">i18n</span><span class="tag">Wireframe 迭代</span>
+        </div>
+        <ul>
+          <li><b>做什么</b>：以「图像压缩」为主题的静态教学网站，分 Home / Learning / Game / Test / Community 五个板块。</li>
+          <li><b>我负责</b>：游戏模块的交互实现与页面搭建、中英文国际化、线框图版本迭代与演示视频脚本。</li>
+          <li><b>结果</b>：三层架构（资源 / 组件 / 页面）落地，产出多语言演示视频与可复用的设计文档。</li>
+        </ul>
+      </div>
+      <div class="foot">
+        <span class="note">小组项目 · 仓库属组长账号</span>
+        <a class="btn" href="https://github.com/JohanHuang2005/2025EBU6305G17" target="_blank" rel="noopener">查看仓库 →</a>
+      </div>
+    </article>
+
+    <!-- 3. Design & Build -->
+    <article class="card">
+      <div class="noshot">
+        <p>移动机器人整机项目：RPLIDAR 激光雷达 + 迷宫探索 + 全局路径规划 + DWA 局部避障 + STM32 底盘固件。演示视频与结题报告随项目交付（39.mp4 / 39.pdf）。</p>
+      </div>
+      <div class="card-body">
+        <h2>Design &amp; Build 2025<span class="en">Group 39 · 移动机器人</span></h2>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">RPLIDAR</span>
+          <span class="tag">路径规划 / DWA</span><span class="tag">STM32 HAL</span><span class="tag">蓝牙桥接</span>
+        </div>
+        <ul>
+          <li><b>做什么</b>：在未知迷宫中自主建图、规划并到达目标点的移动机器人。</li>
+          <li><b>我负责</b>：雷达数据包解析与坐标系标定、迷宫地图生成、全局规划与局部避障的联调。</li>
+          <li><b>结果</b>：打通「雷达感知 → 地图 → 规划 → 底盘执行」闭环，配套固件与上位机软件两套代码。</li>
+        </ul>
+      </div>
+      <div class="foot">
+        <span class="note">小组项目</span>
+        <a class="btn" href="https://github.com/Halfapear/Group39DnBProject" target="_blank" rel="noopener">查看仓库 →</a>
+      </div>
+    </article>
+
+    <!-- 4. RC -->
+    <article class="card">
+      <div class="card-body">
+        <h2>RC 智能车<span class="en">无线电与嵌入式</span></h2>
+        <div class="tags"><span class="tag">嵌入式</span><span class="tag">传感器</span><span class="tag">状态机</span></div>
+        <ul>
+          <li>智能车平台迭代：灰度摄像头与磁/光传感器接入，搭建「输入—处理—输出」数据通路。</li>
+          <li>负责嵌入式程序流程、串口协议与视觉模块数据对接，参与复杂路况调试。</li>
+        </ul>
+        <p class="note">详细材料整理中，仓库与演示视频可按需提供。</p>
+      </div>
+    </article>
+
+  </div>
+
+  <footer class="page">
+    <a class="btn ghost" href="index.html">← 返回首页</a>
+    <span>1783148122@bupt.edu.cn</span>
+    <span>·</span>
+    <a href="https://github.com/Halfapear" target="_blank" rel="noopener">github.com/Halfapear</a>
+  </footer>
+</div>
+</body>
+</html>
